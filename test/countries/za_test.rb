@@ -16,4 +16,9 @@ class ZATest < Phonie::TestCase
     # Telkom
     parse_test('+27 800 123 321', '27', '800', '123321', "South Africa", false)
   end
+
+  def test_276
+    # Mobile provider using 276
+    parse_test('+27 61 555 5555', '27', '61', '5555555', "South Africa", true)
+  end
 end
